@@ -15,6 +15,13 @@
     font-size: 140%;
     background-color: rgb(110, 175, 148);
 }
+.menu-item h3{
+    padding-left: 25%;
+    padding-bottom: 1%;
+}
+.menu-item {
+    padding-bottom: 7%;
+}
 input {
     padding: 0.5%;
 }
