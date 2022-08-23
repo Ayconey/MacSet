@@ -1,0 +1,20 @@
+#header {
+    text-align: center;
+    font-size: 130%;
+}
+
+#filter {
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 5%;
+}
+#dropdown-basic-button{
+    padding: 1%;
+    padding-right:5%;
+    padding-left:5%;
+    font-size: 140%;
+    background-color: rgb(110, 175, 148);
+}
+input {
+    padding: 0.5%;
+}
