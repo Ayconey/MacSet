@@ -65,7 +65,7 @@ export default function Menu(props) {
         .then(response=>{
             UpdateProducts(response.data)
         })
-        
+
   }
 
     const FormSubmit = (event) => {
@@ -101,16 +101,16 @@ export default function Menu(props) {
                 <Dropdown.Item onClick={()=>{updateCategory('Chicken & Fish')}}>Chicken & Fish</Dropdown.Item>
                 <Dropdown.Item onClick={()=>{updateCategory('Salads')}}>Salads</Dropdown.Item>
                 <Dropdown.Item onClick={()=>{updateCategory('Snacks & Sides')}}>Snacks & Sides</Dropdown.Item>
-                <Dropdown.Item onClick={()=>{updateCategory('Beverages')}}>Beverages</Dropdown.Item>
                 <Dropdown.Item onClick={()=>{updateCategory('Desserts')}}>Desserts</Dropdown.Item>
+                <Dropdown.Item onClick={()=>{updateCategory('Beverages')}}>Beverages</Dropdown.Item>
                 <Dropdown.Item onClick={()=>{updateCategory('Coffee & Tea')}}>Coffee & Tea</Dropdown.Item>
                 <Dropdown.Item onClick={()=>{updateCategory('Smoothies & Shakes')}}>Smoothies & Shakes</Dropdown.Item>
             </DropdownButton>
             <p>Category:{Category}</p>
             <br></br>
             <br></br>
-            <h4>Name:<input placeholder="product's name" name='name' /></h4>
-            <Button type='submit'>ok</Button>
+            <h4>Name: <input placeholder="product's name" name='name' /></h4>
+            <Button type='submit' id='btsButton'>ok</Button>
         </div>
         
         </form>

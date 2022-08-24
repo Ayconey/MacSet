@@ -13,9 +13,9 @@ export default function Navbar() {
           <h1 >MacSet</h1>
         </Grid>
         <Grid item xs={6} id='Nav'>
-        <li><h2><a href='/'>Calories Calc</a></h2></li>
+        <li><h2><a href='/'>Mac Sets</a></h2></li>
         <li><h2><a href='menu'>Mac Menu</a></h2></li>
-        <li><h2><a href='sets'>Mac Sets</a></h2></li>
+        <li><h2><a href='calc'>Calories Calculator</a></h2></li>
         </Grid>
       </Grid>
         </Box>
