@@ -24,6 +24,16 @@ class ProductModelTestCase(TestCase):
             CalciumDaily=30,
             IronDaily=4,
         )
-
+        p1 = Product.objects.all()[0]
     def test_product_created(self):
         self.assertTrue(Product.objects.all())
+
+    def test_product_add(self):
+        Calories = 400
+        Calories += self.p1.Calories
+        self.assertTrue(Calories==810)
+
+
+class ProductViewTestCase(TestCase):
+    def setUp(self) -> None:
+        view = []
