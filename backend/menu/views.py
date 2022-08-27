@@ -18,10 +18,26 @@ class ProductsListView(generics.ListCreateAPIView):
         queryset = Product.objects.all()
         category = self.request.query_params.get('category')
         name = self.request.query_params.get('name')
+        sortby = self.request.query_params.get('sortby')
         if category:
             queryset = queryset.filter(Category__istartswith=category)
         if name:
             queryset = queryset.filter(Name__icontains=name)
+        if sortby:
+            if sortby == 'Cal_desc':
+                queryset = queryset.order_by('-Calories')
+            if sortby == 'Cal_asc':
+                queryset = queryset.order_by('Calories')
+            if sortby == 'Sugar_desc':
+                queryset = queryset.order_by('-Sugars')
+            if sortby == 'Sugar_asc':
+                queryset = queryset.order_by('Sugars')
+            if sortby == 'Fat_desc':
+                queryset = queryset.order_by('-TotalFat')
+            if sortby == 'Fat_asc':
+                queryset = queryset.order_by('TotalFat')
+            if sortby == 'Protein':
+                queryset = queryset.order_by('-Protein')
         return queryset
 
 
@@ -34,7 +50,7 @@ class ProductsDetailView(generics.RetrieveUpdateDestroyAPIView):
 def create_set_view(request):
     cal_max = int(request.data.get('cal_max', 600))
     cal_min = int(request.data.get('cal_min', 540))
-    protein = int(request.data.get('cal_min', 'None'))
+    # protein = int(request.data.get('cal_min', 'None'))
     cat_add = request.data.get('cat_add', 'None')
     cat_drink = request.data.get('cat_drink', 'None')
     cat_main = request.data.get('cat_main', 'Beef & Pork')

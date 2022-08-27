@@ -24,7 +24,6 @@ export default function Home(props) {
       cat_drink:CatDrink,
       cal_min:event.target.cal_min.value,
       cal_max:event.target.cal_max.value,
-      protein:event.target.protein.value,
     },{headers:headers})
     .then(response=>{
       console.log(response)
@@ -88,9 +87,9 @@ export default function Home(props) {
         
           <h3>Calories min. : <input name='cal_min' defaultValue={400}/></h3>
           <h3>Calories max. : <input name='cal_max' defaultValue={600}/></h3>
-          <h3>Protein: <input name='protein'/></h3>
+          
           <br></br>
-          <p>You can leave Protein empty if you don't care about them</p>
+          <p>Minimum Calories to create set is 540</p>
           <br></br>
           <Button type='submit'>OK</Button>
         </form>

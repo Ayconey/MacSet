@@ -10,6 +10,7 @@ import '../css/menu.css'
 export default function Menu(props) {
     const [Products,UpdateProducts] = useState([])
     const [Category,updateCategory] = useState('')
+    const [SortBy,updateSortBy] = useState('')
     const [Name,updateName] = useState('')
 
     
@@ -75,7 +76,7 @@ export default function Menu(props) {
         const headers = {
             'Content-type':'application/json',
         }
-        axios.get(`${props.url}menu/?category=${Category}&name=${event.target.name.value}`,{headers:headers})
+        axios.get(`${props.url}menu/?category=${Category}&name=${event.target.name.value}&sortby=${SortBy}`,{headers:headers})
         .then(response=>{
             UpdateProducts(response.data)
         })
@@ -106,7 +107,20 @@ export default function Menu(props) {
                 <Dropdown.Item onClick={()=>{updateCategory('Coffee & Tea')}}>Coffee & Tea</Dropdown.Item>
                 <Dropdown.Item onClick={()=>{updateCategory('Smoothies & Shakes')}}>Smoothies & Shakes</Dropdown.Item>
             </DropdownButton>
-            <p>Category:{Category}</p>
+            <p>Category: {Category}</p>
+            <br></br>
+            <br></br>
+            <DropdownButton id="dropdown-basic-button" title="Sort by" name="categ">
+                <Dropdown.Item onClick={()=>{updateSortBy('')}}>None</Dropdown.Item>
+                <Dropdown.Item onClick={()=>{updateSortBy('Cal_desc')}}>Calories descending</Dropdown.Item>
+                <Dropdown.Item onClick={()=>{updateSortBy('Cal_asc')}}>Calories ascending</Dropdown.Item>
+                <Dropdown.Item onClick={()=>{updateSortBy('Protein')}}>Protein</Dropdown.Item>
+                <Dropdown.Item onClick={()=>{updateSortBy('Fat_desc')}}>Fat descending</Dropdown.Item>
+                <Dropdown.Item onClick={()=>{updateSortBy('Fat_asc')}}>Fat ascending</Dropdown.Item>
+                <Dropdown.Item onClick={()=>{updateSortBy('Sugar_desc')}}>Sugar descending</Dropdown.Item>
+                <Dropdown.Item onClick={()=>{updateSortBy('Sugar_asc')}}>Sugar ascending</Dropdown.Item>
+            </DropdownButton>
+            <p>Sort by: {SortBy}</p>
             <br></br>
             <br></br>
             <h4>Name: <input placeholder="product's name" name='name' /></h4>
