@@ -10,7 +10,7 @@ export default function CalorieCalc(props) {
     const [Name,updateName] = useState('')
     const [Res,updateRes] = useState({
         Calories:0,
-        Fat:0,
+        TotalFat:0,
         Carbohydrates:0,
         Protein:0,
         SaturatedFat:0,
@@ -49,7 +49,7 @@ export default function CalorieCalc(props) {
     const CalculateCalories = () => {
         let tmpRes = {
             Calories:0,
-            Fat:0,
+            TotalFat:0,
             Carbohydrates:0,
             Protein:0,
             SaturatedFat:0,
@@ -113,7 +113,7 @@ export default function CalorieCalc(props) {
                 <div id='res'>
                     <h2>Results</h2>
                     <h3>Calories: {Res.Calories} kcal</h3>
-                    <h3>Fat: {Res.Fat} g</h3>
+                    <h3>Fat: {Res.TotalFat} g</h3>
                     <h3>Carbohydrates: {Res.Carbohydrates} g</h3>
                     <h3>Protein: {Res.Protein} g</h3>
                     <h3>SaturatedFat: {Res.SaturatedFat} g</h3>

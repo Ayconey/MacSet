@@ -50,7 +50,7 @@ export default function Home(props) {
   return (
     <div>
       <div id='filter'>
-        <h1>Make Your item!</h1>
+        <h1>Make Your Food Set!</h1>
 
         <form onSubmit={FormSubmit}>
         <Row>

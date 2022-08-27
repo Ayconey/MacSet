@@ -34,7 +34,7 @@ export default function Menu(props) {
                             <Col>
                                 <p>saturated fat: {item.SaturatedFat} g</p>
                                 <p>trans fat: {item.TransFat} g</p>
-                                <p>cholesterol: {item.Cholesterol} g</p>
+                                <p>cholesterol: {item.Cholesterol} mg</p>
                                 <p>sugars: {item.Sugars} g</p>
                                 <p>dietary fiber: {item.DietaryFiber} g</p>
                             </Col>
@@ -43,7 +43,7 @@ export default function Menu(props) {
                                 <p>vit. C daily: {item.VitCDaily} %</p>
                                 <p>Calcium daily: {item.CalciumDaily} %</p>
                                 <p>Iron daily: {item.IronDaily} %</p>
-                                <p>sodium: {item.Sodium} mcg</p>
+                                <p>sodium: {item.Sodium} mg</p>
                                 
                             </Col>
                             <Col xs={5}></Col>
