@@ -55,7 +55,6 @@ def create_set_view(request):
     cat_drink = request.data.get('cat_drink', 'None')
     cat_main = request.data.get('cat_main', 'Beef & Pork')
     cal_range = cal_max-cal_min
-
     if cal_max > 35000:
         cal_max = 35000
 
@@ -76,6 +75,8 @@ def create_set_view(request):
 
     # choosing main dish
     products_main = Product.objects.all().filter(Category=cat_main, Calories__lte=cal_max)
+    if not products_main: # no products
+        return Response(status=404,data={'message':"Couldn't find products satisfying criteria"})
     main_ids = []
     for i in products_main:
         main_ids.append(i.id)
