@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-st228_u-3uvsn%s&^l_c%8s=r%kx&##s0s498-+_1$nc%jn4q4
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["node85731-compose.unicloud.pl"]
 
 
 # Application definition
