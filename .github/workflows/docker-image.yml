@@ -26,10 +26,16 @@ jobs:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_TOKEN }}
       -
-        name: Build and push
+        name: Build and push frontend
         uses: docker/build-push-action@v3
         with:
           context: frontend
           push: true
           tags: aycone/macset-frontend:latest
-        
+      -
+        name: Build and push backend
+        uses: docker/build-push-action@v3
+        with:
+          context: backend
+          push: true
+          tags: aycone/macset:latest
