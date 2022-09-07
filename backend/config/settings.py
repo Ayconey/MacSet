@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-st228_u-3uvsn%s&^l_c%8s=r%kx&##s0s498-+_1$nc%jn4q4
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["node85731-compose.unicloud.pl"]
+ALLOWED_HOSTS = ["node85731-compose.unicloud.pl","139.162.156.195"]
 
 
 # Application definition
@@ -135,4 +135,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     'https://localhost:3000',
+    'http://139.162.156.195:3000',
 ]
