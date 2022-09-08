@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-st228_u-3uvsn%s&^l_c%8s=r%kx&##s0s498-+_1$nc%jn4q4
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["node85731-compose.unicloud.pl","172.104.147.246"]
+ALLOWED_HOSTS = ["node85731-compose.unicloud.pl","172.104.147.246","127.0.0.1"]
 
 
 # Application definition
@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'mcSet',
+        'NAME': 'postgres',
         'USER':'mcSet',
         'PASSWORD':'mysecretpassword',
         'HOST':'172.104.147.246',
