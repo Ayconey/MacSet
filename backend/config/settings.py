@@ -85,7 +85,7 @@ DATABASES = {
         'NAME': 'mcSet',
         'USER':'mcSet',
         'PASSWORD':'mysecretpassword',
-        'HOST':'db',
+        'HOST':'172.104.147.246',
         'PORT':'5432',
     }
 }
