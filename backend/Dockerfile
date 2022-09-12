@@ -1,4 +1,4 @@
-FROM python:3.9-alphine3.13
+FROM python:3
 LABEL maintainer="MacSet.com"
 ENV PYTHONUNBUFFERED 1
 WORKDIR /code
