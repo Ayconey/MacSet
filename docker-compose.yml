@@ -11,9 +11,17 @@ services:
       - "5432:5432"
   backend:
     build: backend
-    command: python backend/manage.py runserver 0.0.0.0:8000
+    command: sh -c "python backend/manage.py wait_for_db && python backend/manage.py migrate && python backend/manage.py runserver 0.0.0.0:8000"
     volumes:
       - .:/code/
+    environment:
+      - DEBUG=1
+      - SECRET_KEY=foo
+      - ALLOWED_HOSTS=node85731-compose.unicloud.pl,139.162.147.158,127.0.0.1,localhost
+      - DB_HOST=db
+      - DB_NAME=mcSet
+      - DB_USER=mcSet
+      - DB_PASS=mysecretpassword
     ports:
       - "8000:8000"
     depends_on:

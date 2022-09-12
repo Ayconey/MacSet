@@ -9,7 +9,7 @@ import CalorieCalc from './sites/CalorieCalc';
 
 function App() {
   // constants
-  const base_url = 'http://127.0.0.1:8000/'
+  const base_url = 'http://139.162.147.158:8000/'
   return (
     <div>
       <Navbar />
