@@ -17,7 +17,7 @@ services:
     environment:
       - DEBUG=1
       - SECRET_KEY=foo
-      - ALLOWED_HOSTS=node85731-compose.unicloud.pl,139.162.147.158,127.0.0.1,localhost
+      - ALLOWED_HOSTS=node85731-compose.unicloud.pl,170.187.186.22,127.0.0.1,localhost
       - DB_HOST=db
       - DB_NAME=mcSet
       - DB_USER=mcSet

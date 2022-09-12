@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = bool(int(os.environ.get('DEBUG',0)))
 
 #ALLOWED_HOSTS = filter(None,os.environ.get("ALLOWED_HOSTS",'').split(','))
-ALLOWED_HOSTS = ['node85731-compose.unicloud.pl','139.162.147.158','127.0.0.1','localhost']
+ALLOWED_HOSTS = ['node85731-compose.unicloud.pl','170.187.186.22','127.0.0.1','localhost']
 # Application definition
 
 INSTALLED_APPS = [
@@ -134,5 +134,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     'https://localhost:3000',
-    'http://172.104.147.246:3000',
+    'http://170.187.186.22:3000',
 ]
