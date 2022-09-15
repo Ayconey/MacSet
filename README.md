@@ -3,6 +3,7 @@
 App written for portfolio purpouses, about US Mcdonald's menu using data provided by McDonald's on kaggle, https://www.kaggle.com/datasets/mcdonalds/nutrition-facts
 
 I mainly focus on functionality, not on the look of the site.
+Ready to deployment with docker-compose.
 # 3 Main Functionalities :hammer:
 - Calorie Calculator, you can add your order and page will calculate all the macro and micro nutritions about your meal.
 - Menu itself, with all the nutritions and search filter.
